@@ -22,6 +22,7 @@
             <script src="data/sendero_a.geojson"></script>
             <script src="data/sendero_b.geojson"></script>
             <script src="data/puerto_boyaca.geojson"></script>
+            <script src="data/resguardos_alto_san_juan.geojson"></script>
     <style type="text/css">
         #map { height: 100%; width: 100%;}
         .legend { background: white; line-height: 1.5em}
@@ -160,6 +161,16 @@
                 fillOpacity : 0.5
             }
         }
+        function resguardos_alto_san_juanStyle(feature){
+            return {
+                fillColor : 'green',
+                weight : 2, 
+                opacity : 0.99,
+                color : 'green', 
+                dashArray : 3, 
+                fillOpacity : 0.5
+            }
+        }
         const tilesProvider = 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png '
 
     let map = L.map ('map').setView([5.96010,-74.58968],15)
@@ -172,6 +183,11 @@
         var puerto_boyacaLayer = L.geoJson(
             puerto_boyaca,
             {style : puerto_boyacaStyle}
+            ).addTo(map);
+
+        var resguardos_alto_san_juanLayer = L.geoJson(
+            resguardos_alto_san_juan,
+            {style : resguardos_alto_san_juanStyle}
             ).addTo(map);
 
         var quinchasaLayer = L.geoJson(
