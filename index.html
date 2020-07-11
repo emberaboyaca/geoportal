@@ -166,8 +166,8 @@
                 fillColor : 'green',
                 weight : 2, 
                 opacity : 0.99,
-                color : 'green', 
-                dashArray : 3, 
+                color : 'black', 
+                dashArray : 1, 
                 fillOpacity : 0.5
             }
         }
@@ -264,6 +264,38 @@
         myMarker4.addTo(map);
         myMarker4.bindPopup(
             '<b>Parque Regional Serranía de Las Quinchas</b>',
+            {minWidth:300}
+        );
+        var point5 = [5.33194,-76.23037];
+        var marker5 =L.marker(point5).addTo(map);
+        var myMarker5 = L.marker(point5);
+        myMarker5.addTo(map);
+        myMarker5.bindPopup(
+            '<b>Resguardo Peñas del Olvido (Tadó, Chocó)</b>',
+            {minWidth:300}
+        );
+        var point6 = [5.38369,-76.14526];
+        var marker6 =L.marker(point6).addTo(map);
+        var myMarker6 = L.marker(point6);
+        myMarker6.addTo(map);
+        myMarker6.bindPopup(
+            '<b>Resguardo Gitto Docabú (Pueblo Rico Risaralda)</b>',
+            {minWidth:300}
+        );
+        var point7 = [5.3411389,-76.1464993];
+        var marker7 =L.marker(point7).addTo(map);
+        var myMarker7 = L.marker(point7);
+        myMarker7.addTo(map);
+        myMarker7.bindPopup(
+            '<b>Corregimiento Santa Cecilia (Pueblo Rico, Risaralda)</b>',
+            {minWidth:300}
+        );
+        var point8 = [5.296922,-76.151634];
+        var marker8 =L.marker(point8).addTo(map);
+        var myMarker8 = L.marker(point8);
+        myMarker8.addTo(map);
+        myMarker8.bindPopup(
+            '<b>Quebrada Amurrupá (Pueblo Rico, Risaralda)</b>',
             {minWidth:300}
         );
         
