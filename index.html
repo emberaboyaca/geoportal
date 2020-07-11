@@ -107,7 +107,7 @@
         }
         const tilesProvider = 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
 
-let map = L.map ('map').setView([2.605002, -72.476853],12)
+let map = L.map ('map').setView([5.96035,-74.60073],12)
  
 L.tileLayer(tilesProvider,{
     maxZoom: 18,
@@ -134,28 +134,28 @@ L.tileLayer(tilesProvider,{
             ).addTo(map);
         map.fitBounds(viasLayer.getBounds());
        
-        var point = [2.559118, -72.634606];
+        var point = [5.959237,-74.593642];
         var marker =L.marker(point).addTo(map);
         var myMarker = L.marker(point);
         myMarker.addTo(map);
         myMarker.bindPopup(
-            '<b>San José del Guaviare</b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
+            '<b>asaloma embera katío</b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
             {minWidth:300}
         );
-        var point2 = [2.605002, -72.576853];
+        var point2 = [6.0038175,-74.3734270];
         var marker2 =L.marker(point2).addTo(map);
         var myMarker2 = L.marker(point2);
         myMarker2.addTo(map);
         myMarker2.bindPopup(
-            '<b>Barrancón Jiw</b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
+            '<b>Motordochake embera chamí</b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
             {minWidth:300}
         );
-        var point3 = [2.605002, -72.476853];
+        var point3 = [5.909985,-74.402288];
         var marker3 =L.marker(point3).addTo(map);
         var myMarker3 = L.marker(point3);
         myMarker3.addTo(map);
         myMarker3.bindPopup(
-            '<b>Barrancón Jiw</b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
+            '<b>Hacienda Bombay/b> <div><image style="width: 100%" <img src="images/casa.jpg" alt="image"/> </div>',
             {minWidth:300}
         );
         
