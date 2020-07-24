@@ -19,6 +19,9 @@
     <script src="data/vias_1.geojson"></script>
     <script src="data/vias_2.geojson"></script>
     <script src="data/resguardos_alto_san_juan.geojson"></script>
+    <script src="data/rios_san_juan.geojson"></script>
+    <script src="data/centros_pobla.geojson"></script>
+    <script src="data/produccion_petroleo.geojson"></script>
 </head>
 <body>
 
@@ -62,6 +65,28 @@
         fillOpacity: 0.1
     };
 }
+function petroleoStyle(feature) {
+    return {
+        fillColor: 'yelow',
+        weight: 2,
+        opacity: 1,
+        color: 'black',
+        dashArray: '1',
+        fillOpacity: 0.1
+    };
+}
+    var petroleo =L.geoJson(petroleo,{style: petroleoStyle}).addTo(mymap);    
+
+    function senderoStyle(feature) {
+    return {
+        fillColor: 'red',
+        weight: 2,
+        opacity: 1,
+        color: 'red',
+        dashArray: '4',
+        fillOpacity: 0.1
+    };
+}
 
 function resguardos_alto_san_juanStyle(feature){
             return {
@@ -78,6 +103,26 @@ function resguardos_alto_san_juanStyle(feature){
         resguardos_alto_san_juan,
         {style : resguardos_alto_san_juanStyle}
         ).addTo(mymap);
+
+
+
+        function rios_san_juanStyle(feature){
+            return {
+                fillColor : 'green',
+                weight : 1, 
+                opacity : 0.99,
+                color : 'blue', 
+                dashArray : 0, 
+                fillOpacity : 0.5
+            }
+        }
+
+        var rios_san_juan = L.geoJson(
+        rios_san_juan,
+        {style : rios_san_juanStyle}
+        ).addTo(mymap);
+
+
 
     var sendero_a =L.geoJson(sendero_a,{style: senderoStyle}).addTo(mymap);  
     var sendero_b =L.geoJson(sendero_b,{style: senderoStyle}).addTo(mymap);  
@@ -172,7 +217,7 @@ function resguardos_alto_san_juanStyle(feature){
         var myMarker6 = L.marker(point6);
         myMarker6.addTo(mymap);
         myMarker6.bindPopup(
-            '<b>Resguardo Gito Docabú (Pueblo Rico Risaralda)</b>',
+            '<b>Resguardo Gitto Docabú (Pueblo Rico Risaralda)</b>',
             {minWidth:300}
         );
         var point7 = [5.3411389,-76.1464993];
@@ -204,13 +249,15 @@ function resguardos_alto_san_juanStyle(feature){
 
     var overlayMaps = {
     "Puerto Boyacá": puerto,
+    "Áreas de producción de hidrocarburos": petroleo,
     "Serranía de Las Quinchas (Puerto Boyacá)": quinchas,
     "Serranía de Las Quinchas (Otanche)": quinchasb,
     "Asentamientos embera": predial,
     "sendero 1": sendero_a, 
     "sendero 2": sendero_b,
     "Vías Puerto Boyacá": vias_a,
-    "Resguardos embera Alto San Juan": resguardos_alto_san_juan
+    "Resguardos embera Alto San Juan": resguardos_alto_san_juan,
+    "Ríos Alto San Juan": rios_san_juan
     
     };
 
