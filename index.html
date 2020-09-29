@@ -56,10 +56,10 @@
         <input type="button" value="Reubicación 2002" class="btn" onclick="setData3()">
         <input type="button" value="Destierro 2009" class="btn" onclick="setData4()">
         <input type="button" value="Retorno katío 2012" class="btn" onclick="setData5()">
+        <input type="button" value="Regreso a Puerto Boyacá 2014-2016" class="btn" onclick="setData6()">
         <input type="button" value="ocultar flujos" class="btn" onclick="hide()">
         <input type="button" value="mostrar flujos" class="btn" onclick="show()">
-        <input type="button" value="pausar" class="btn" onclick="pause()">
-        <input type="button" value="iniciar" class="btn" onclick="play()">
+
     </div>
     <script>
        
@@ -88,6 +88,7 @@
 
         var data_2012 = [{"from":[-74.372880, 6.002507],"to":[-76.1395026642065, 5.3216320450382],"labels":["","amurrupa"],"color":"#ff3a31","value":1},{"from":[-74.372880, 6.002507],"to":[-76.23037, 5.33194],"labels":["","Peñas"],"color":"#1B2BF0", "value":1},{"from":[-74.372880, 6.002507],"to":[-76.170633, 5.370335],"labels":["Gito Docabú","Gito Docabú"],"color":"#CD1BF0","value":1}];
 
+        var data_2014 = [{"from":[-76.1395026642065, 5.3216320450382],"to":[-74.400274, 6.015819],"labels":["","amurrupa"],"color":"#ff3a31","value":1}, {"from":[-76.23037, 5.33194],"to":[-74.400274, 6.015819],"labels":["Amurrupá","Casaloma"],"color":"#1B2BF0","value":1}, {"from":[-76.170633, 5.370335],"to":[-74.400274, 6.015819],"labels":["Amurrupá","Casaloma"],"color":"#CD1BF0","value":1}, {"from":[-74.400274, 6.015819],"to":[-74.383436, 6.012392],"labels":["","amurrupa"],"color":"#ff3a31","value":1}, {"from":[-74.400274, 6.015819],"to":[-74.383436, 6.012392],"labels":["Amurrupá","Casaloma"],"color":"#1B2BF0","value":1}, {"from":[-74.400274, 6.015819],"to":[-74.383436, 6.012382],"labels":["Amurrupá","Casaloma"],"color":"#CD1BF0","value":1}, {"from":[-74.383436, 6.012382],"to":[-74.327998, 5.850710],"labels":["Amurrupá","Casaloma"],"color":"#CD1BF0","value":1}, {"from":[-74.384436, 6.012482],"to":[-74.327998, 5.850610],"labels":["Amurrupá","Casaloma"],"color":"#ff3a31","value":1},  {"from":[-74.384436, 6.012582],"to":[-74.326998, 5.851610],"labels":["Amurrupá","Casaloma"],"color":"#1B2BF0","value":1}, {"from":[-74.326998, 5.851610],"to":[-74.593752, 5.958819],"labels":["","amurrupa"],"color":"#ff3a31","value":1}, {"from":[-74.323898, 5.852710],"to":[-74.592852, 5.958819],"labels":["","amurrupa"],"color":"#1B2BF0","value":1}, {"from":[-74.323898, 5.852510],"to":[-74.592852, 5.958619],"labels":["","amurrupa"],"color":"#CD1BF0","value":1}],
 
         data = data.map(item => { return {...item, value: parseInt(Math.random()*1)}});
       
@@ -119,6 +120,9 @@
         }
         function setData5(){
             migrationLayer.setData(data_2012);
+        }
+        function setData6(){
+            migrationLayer.setData(data_2014);
         }
         function hide(){
             migrationLayer.hide();
